@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ring Travel Concierge Mock</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Ring travel concierge">
+        <aside class="context-panel">
+          <div class="brand-block">
+            <span class="brand-mark">R</span>
+            <div>
+              <p class="eyebrow">Recruit Ring Mock</p>
+              <h1>旅行体験 AI コンシェルジュ</h1>
+            </div>
+          </div>
+
+          <div class="trip-visual" aria-label="HOT PEPPER グルメとじゃらんを横断する旅行体験AIコンシェルジュのイメージ">
+            <div class="partner-lockup" aria-hidden="true">
+              <div class="partner-logo hotpepper-logo">
+                <span class="logo-kana">ホットペッパー</span>
+                <strong>HOT PEPPER</strong>
+                <span class="logo-service">グルメ</span>
+              </div>
+              <span class="cross-symbol">×</span>
+              <div class="partner-logo jalan-logo">
+                <img src="./assets/logo_jalan.svg" alt="じゃらん" />
+              </div>
+            </div>
+
+            <div class="ai-route" aria-hidden="true">
+              <div class="route-node">
+                <span class="node-icon">宿</span>
+                <strong>宿泊予約</strong>
+                <small>夕朝食付き</small>
+              </div>
+              <div class="route-line"></div>
+              <div class="route-node ai-node">
+                <span class="node-icon">AI</span>
+                <strong>一括提案</strong>
+                <small>予算最適化</small>
+              </div>
+              <div class="route-line"></div>
+              <div class="route-node">
+                <span class="node-icon">食</span>
+                <strong>飲食予約</strong>
+                <small>子連れ対応</small>
+              </div>
+            </div>
+
+            <div class="trip-badge" aria-hidden="true">
+              箱根 1泊2日 / 49,200円
+            </div>
+          </div>
+
+          <div class="scenario-summary">
+            <p class="section-label">ユースケース</p>
+            <dl>
+              <div>
+                <dt>行き先</dt>
+                <dd>箱根 / 1泊2日</dd>
+              </div>
+              <div>
+                <dt>同行者</dt>
+                <dd>夫婦 + 3歳の息子</dd>
+              </div>
+              <div>
+                <dt>予算</dt>
+                <dd>50,000円以内</dd>
+              </div>
+              <div>
+                <dt>連携</dt>
+                <dd>じゃらん × ホットペッパーグルメ</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="reservation-card" id="reservationCard">
+            <p class="section-label">予約候補</p>
+            <h2>箱根湯本 やすらぎテラス</h2>
+            <p>夕朝食付きファミリープラン / 和洋室 / 添い寝対応</p>
+            <div class="price-row">
+              <span>合計</span>
+              <strong>49,200円</strong>
+            </div>
+          </div>
+        </aside>
+
+        <section class="chat-panel">
+          <header class="chat-header">
+            <div>
+              <p class="eyebrow">One-stop AI booking</p>
+              <h2>AI Concierge</h2>
+            </div>
+            <button class="icon-button" id="resetButton" type="button" aria-label="会話をリセット">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+                <path d="M21 3v6h-6" />
+              </svg>
+            </button>
+          </header>
+
+          <div class="messages" id="messages" aria-live="polite"></div>
+
+          <div class="quick-actions" aria-label="サンプル入力">
+            <button type="button" data-template="plan">旅行相談を入力</button>
+            <button type="button" data-template="book">予約を依頼</button>
+          </div>
+
+          <form class="composer" id="chatForm">
+            <label class="sr-only" for="messageInput">メッセージ</label>
+            <textarea
+              id="messageInput"
+              rows="2"
+              placeholder="例: 12月の土日に、僕・妻・息子（3歳）で..."
+            ></textarea>
+            <button class="send-button" type="submit" aria-label="送信">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m22 2-7 20-4-9-9-4Z" />
+                <path d="M22 2 11 13" />
+              </svg>
+            </button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
