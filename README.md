@@ -1,6 +1,8 @@
-# Ring Cross-sell Travel Concierge Mock
+# Ring Cross-sell Travel Concierge
 
-リクルートの Ring 新規事業アイデア向けに、じゃらんとホットペッパーグルメを横断した旅行体験 AI チャットボットの最小モックです。
+じゃらんとホットペッパーグルメを横断し、宿泊・飲食・予算をまとめて提案する旅行体験 AI コンシェルジュです。
+
+現在は静的モックを公開済みで、次フェーズでは AWS 上に検索・予約プロトタイプを構築します。
 
 ## できること
 
@@ -8,7 +10,7 @@
 - AI が宿、ランチ、夕食付き宿泊プラン、合計金額を提案します。
 - ユーザーが予約依頼を送ると、メール送付までの予約完了メッセージを返します。
 
-## 技術構成
+## 現在のモック
 
 - HTML / CSS / JavaScript の静的モック
 - 外部 API、DB、ビルドツールなし
@@ -22,9 +24,27 @@ node tools/serve.mjs
 
 起動後、`http://127.0.0.1:4173` を開いてください。
 
-## 次の拡張案
+## AWS版の目標構成
 
-- Azure OpenAI Service で自然言語理解と旅程生成を実装
-- じゃらん / ホットペッパーグルメ相当の在庫データを JSON または API で接続
-- 予約確定前の同意 UI、メール送信、予約番号発行を追加
-- Microsoft Azure Static Web Apps へのホスティング
+- AWS Amplify Hosting + GitHub App
+- API Gateway HTTP API + Lambda / TypeScript
+- Amazon Bedrock Nova 2 Lite
+- Aurora PostgreSQL Serverless v2 + Data API
+- Amazon Cognito
+- AWS CDK / TypeScript
+- GitHub Actions + AWS OIDC
+
+## 引継ぎ資料
+
+別端末または別の AI エージェントで作業を再開する場合は、最初に次を読んでください。
+
+1. [AGENTS.md](AGENTS.md)
+2. [docs/handoff.md](docs/handoff.md)
+3. [docs/architecture.md](docs/architecture.md)
+4. [docs/data-model.md](docs/data-model.md)
+5. [docs/api-contract.md](docs/api-contract.md)
+6. [docs/setup.md](docs/setup.md)
+7. [docs/deployment.md](docs/deployment.md)
+8. [docs/references.md](docs/references.md)
+
+新しい AI エージェントへ渡すプロンプトは [docs/agent-start-prompt.md](docs/agent-start-prompt.md) にあります。
