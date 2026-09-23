@@ -15,6 +15,8 @@ Turn the existing visual mock into a realistic AWS prototype that queries normal
 
 The Azure site is the fallback during migration. Do not delete or disable it until the AWS deployment is accepted.
 
+The project may also be delivered as a ZIP snapshot. The ZIP intentionally excludes `.git`, local environment files, generated output, and credentials. See `docs/zip-handoff.md`.
+
 ## Completed
 
 - Static AI Concierge chat UI.

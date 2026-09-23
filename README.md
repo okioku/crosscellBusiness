@@ -46,5 +46,6 @@ node tools/serve.mjs
 6. [docs/setup.md](docs/setup.md)
 7. [docs/deployment.md](docs/deployment.md)
 8. [docs/references.md](docs/references.md)
+9. [docs/zip-handoff.md](docs/zip-handoff.md)
 
 新しい AI エージェントへ渡すプロンプトは [docs/agent-start-prompt.md](docs/agent-start-prompt.md) にあります。

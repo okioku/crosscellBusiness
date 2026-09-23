@@ -6,9 +6,9 @@ Paste the following into the AI agent on the new computer after cloning the repo
 You are taking over the Ring Cross-sell Travel Concierge project.
 
 Repository: https://github.com/okioku/crosscellBusiness
-Working branch: codex/aws-prototype
+Source snapshot: codex/aws-prototype (the supplied ZIP may not contain .git metadata)
 
-First, read AGENTS.md and every document linked from its "Read first" section. Then inspect the repository and git status before changing anything.
+First, read AGENTS.md and every document linked from its "Read first" section. Then inspect the project files before changing anything. If .git exists, inspect git status. If it does not exist, treat the folder as a ZIP snapshot and do not invent branch or commit state.
 
 The current application is a static mock. The target is a low-cost AWS prototype using Amplify Hosting, API Gateway HTTP API, Lambda/TypeScript, Amazon Bedrock Nova 2 Lite, Aurora PostgreSQL Serverless v2 with Data API, Cognito, CDK/TypeScript, and GitHub Actions OIDC.
 

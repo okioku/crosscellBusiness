@@ -22,6 +22,7 @@ Before changing code, read these documents in order:
 5. `docs/setup.md`
 6. `docs/deployment.md`
 7. `docs/references.md`
+8. `docs/zip-handoff.md`
 
 ## Current state
 
@@ -29,6 +30,7 @@ Before changing code, read these documents in order:
 - The static mock is deployed to Azure Static Web Apps from `main`.
 - The AWS implementation has not been scaffolded yet.
 - Work on the AWS version belongs on `codex/aws-prototype` until cutover.
+- A ZIP handoff does not contain `.git`; treat its contents as a snapshot of `codex/aws-prototype`.
 - Do not delete the Azure workflow or Azure resources before the AWS version is verified.
 
 ## Architecture decisions

@@ -19,6 +19,23 @@ Set-Location crosscellBusiness
 git switch codex/aws-prototype
 ```
 
+## Start from the handoff ZIP
+
+If the project was supplied as a ZIP instead of cloned from GitHub:
+
+1. Extract the ZIP to a short local path, for example `C:\dev\ring-crosscell`.
+2. Open the extracted folder, not its parent folder, in the development tool.
+3. Read `AGENTS.md` and `docs/handoff.md` first.
+4. Use `docs/agent-start-prompt.md` as the first prompt for the new AI agent.
+5. Run the current static mock before changing files.
+
+```powershell
+Set-Location C:\dev\ring-crosscell
+node tools/serve.mjs
+```
+
+The ZIP intentionally excludes `.git`. If the new computer must push changes later, either clone the repository separately and copy the changed files into the clone, or initialize Git and connect the approved remote after confirming the destination repository and branch.
+
 ## Run the current static mock
 
 ```powershell
